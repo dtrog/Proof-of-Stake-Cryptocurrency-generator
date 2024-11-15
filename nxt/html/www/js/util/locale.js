@@ -1,6 +1,6 @@
 /******************************************************************************
  * Copyright © 2013-2016 The Nxt Core Developers.                             *
- * Copyright © 2016-2018 Jelurida IP B.V.                                     *
+ * Copyright © 2016-2020 Jelurida IP B.V.                                     *
  *                                                                            *
  * See the LICENSE.txt file at the top-level directory of this distribution   *
  * for licensing information.                                                 *
@@ -18,7 +18,7 @@ var NRS = (function (NRS) {
     var currentLocale = {};
 
     NRS.getLocaleList = function() {
-        return SORTED_LOCALE_DATE;
+        return SORTED_LOCALE_DATA;
     };
     
     NRS.getLocaleName = function(locale) {
@@ -286,7 +286,7 @@ var NRS = (function (NRS) {
         "zu-ZA": {dateFormat: "yyyy/MM/dd", decimal: ".", section: ",", displayName: "Zulu (South Africa)"}
     };
 
-    var SORTED_LOCALE_DATE = Object.keys(LOCALE_DATA).sort(function(a,b) {
+    var SORTED_LOCALE_DATA = Object.keys(LOCALE_DATA).sort(function(a,b) {
         return LOCALE_DATA[a].displayName.localeCompare(LOCALE_DATA[b].displayName);
     });
 
